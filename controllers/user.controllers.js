@@ -219,7 +219,6 @@ export const login = async (req, res) => {
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
     });
 
 
@@ -358,7 +357,6 @@ export const refreshToken = async (req, res, next) => {
     expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
   });
 
   req.id = decoded.id;
@@ -558,7 +556,6 @@ export const loginWithOtp = async (req, res) => {
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
     });
 
     console.log("Cookie options:", {
