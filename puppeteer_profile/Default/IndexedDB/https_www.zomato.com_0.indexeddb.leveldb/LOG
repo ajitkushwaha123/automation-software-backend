@@ -1,0 +1,6 @@
+2025/08/14-14:27:57.020 6ab4 Creating DB C:\Users\Aakash\Desktop\automation-software-backend\puppeteer_profile\Default\IndexedDB\https_www.zomato.com_0.indexeddb.leveldb since it was missing.
+2025/08/14-14:27:57.062 6ab4 Reusing MANIFEST C:\Users\Aakash\Desktop\automation-software-backend\puppeteer_profile\Default\IndexedDB\https_www.zomato.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/14-14:27:57.233 1040 Level-0 table #5: started
+2025/08/14-14:27:57.294 1040 Level-0 table #5: 1341 bytes OK
+2025/08/14-14:27:57.298 1040 Delete type=0 #3
+2025/08/14-14:27:57.300 25b0 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

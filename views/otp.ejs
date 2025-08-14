@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reset Password</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+      body {
+        width: 100%;
+        background-color: #005ff7;
+        color: #333333;
+        font-family: poppins;
+      }
+      .container {
+        max-width: 640px;
+        padding: 32px 24px;
+        margin: 0 auto;
+        background-color: #ffffff;
+      }
+      header img {
+        height: 56px;
+      }
+      main {
+        margin-top: 32px;
+      }
+      h2 {
+        color: #4a5568;
+      }
+      p {
+        margin-top: 8px;
+        line-height: 1.6;
+        color: #718096;
+      }
+      .verification-code {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        gap: 16px;
+      }
+      .verification-code p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #4299e1;
+        text-align: center;
+        border: 1px solid #4299e1;
+        border-radius: 8px;
+        padding-left: auto;
+      }
+      button {
+        padding: 12px 24px;
+        margin-top: 24px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #3182ce;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      footer {
+        margin-top: 32px;
+        color: #a0aec0;
+      }
+      footer a {
+        color: #4299e1;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .btn {
+        display: flex;
+      }
+      .btn-2 {
+        padding: 12px 24px;
+        margin-top: 24px;
+        font-size: 14px;
+        font-weight: 500;
+        border: #3182ce 2px solid;
+        color: #3182ce;
+        background-color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-left: 10px;
+      }
+      .mail {
+        background-color: #f8f8ff;
+        padding: 20px 0px 20px 0px;
+        overflow-y: hidden;
+        border-radius: 20px;
+        width: 100%;
+      }
+
+      .digi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: auto;
+        text-align: center;
+        padding-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mail">
+      <section class="container">
+        <header>
+          <a href="#">
+            <img
+              src="https://i.ibb.co/JBr8Rp2/kravy-Logo.png"
+              alt="Kravy Logo"
+            />
+          </a>
+        </header>
+
+        <main>
+          <h2>Hi <%= userName %> 🍽️,</h2>
+          <p>
+            Thank you for choosing
+            <span style="font-weight: bold; color: #ff6347">
+              Kravy Billing 🍽️🍕.</span
+            >
+            To proceed with your transaction or access your account, please use
+            the following
+            <span style="font-weight: bold; color: #6366f1">
+              One-Time Password (OTP) 🔒🍴</span
+            >.
+          </p>
+
+          <div class="verification-code">
+            <% verificationCode.split('').forEach(function(digit) { %>
+            <p
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                color: #383838;
+              "
+              class="digi"
+            >
+              <%= digit %>
+            </p>
+            <% }); %>
+          </div>
+
+          <p style="font-size: 16px; line-height: 1.5">
+            This code will be valid for the next
+            <span style="font-weight: bold; color: #28a745">10 minutes</span>.
+            If the code does not work, you can
+            <span style="font-weight: bold; color: #ff6347"
+              >request a new one</span
+            >
+            or contact support 🍴.
+          </p>
+
+          <div class="btn" style="text-align: center; margin: 20px 0">
+            <a href="https://kravy.magicscale.in" style="text-decoration: none">
+              <button
+                style="
+                  padding: 10px 20px;
+                  background-color: #6366f1;
+                  color: white;
+                  font-weight: 600;
+                  border-radius: 5px;
+                  font-size: 16px;
+                  border: 2px solid #6366f1;
+                "
+              >
+                REQUEST NEW OTP
+              </button>
+            </a>
+            <a
+              href="https://kravy.magicscale.in/support"
+              style="text-decoration: none"
+            >
+              <button
+                class="btn-2"
+                style="
+                  padding: 10px 20px;
+                  background-color: #fff;
+                  color: #6366f1;
+                  font-weight: 600;
+                  border-radius: 5px;
+                  font-size: 16px;
+                  margin-left: 10px;
+                  border: 2px solid #6366f1;
+                "
+              >
+                CONNECT SUPPORT
+              </button>
+            </a>
+          </div>
+
+          <p style="font-size: 16px; line-height: 1.5">
+            Thanks, <br />
+            <span style="color: #ff6347; font-weight: bold">Kravy 🍕🍔🍜</span>
+            - Serving you the best dining experience!
+          </p>
+        </main>
+
+        <footer>
+          <p style="font-size: 14px">
+            This email was sent to
+            <a href="#" target="_blank"><%= userEmail %></a>. If you'd rather
+            not receive this kind of email, you can
+            <a href="#">unsubscribe</a> or
+            <a href="#">manage your email preferences</a>.
+          </p>
+
+          <p style="font-size: 14px">
+            © <%= new Date().getFullYear() %> Kravy. All Rights Reserved.
+          </p>
+        </footer>
+      </section>
+    </div>
+
+    <!-- <div class="mail">
+      <section class="container">
+      <header>
+        <a href="#">
+          <img src="https://i.ibb.co/JBr8Rp2/kravy-Logo.png" alt="Kravy Logo" />
+        </a>
+      </header>
+
+      <main>
+        <h2>Hi <%= userName %>,</h2>
+
+        <p>This is your verification code:</p>
+
+        <div class="verification-code">
+          <% verificationCode.split('').forEach(function(digit) { %>
+          <p class="digi"><%= digit %></p>
+          <% }); %>
+        </div>
+
+        <p>
+          This code will only be valid for the next 10 minutes. If the code does
+          not work, you can request a new one or contact support.
+        </p>
+
+        <div class="btn"><a href="https://kravy.magicscale.in"><button>Request New OTP</button></a> <a href="https://kravy.magicscale.in/support"><button class="btn-2">Connect Support</button></a></div>
+
+        <p>
+          Thanks, <br />
+          Kravy ...!
+        </p>
+      </main>
+
+      <footer>
+        <p>
+          This email was sent to
+          <a href="#" target="_blank"><%= userEmail %></a>. If you'd rather not
+          receive this kind of email, you can <a href="#">unsubscribe</a> or
+          <a href="#">manage your email preferences</a>.
+        </p>
+
+        <p>© <%= new Date().getFullYear() %> Kravy. All Rights Reserved.</p>
+      </footer>
+    </section>
+    </div> -->
+  </body>
+</html>

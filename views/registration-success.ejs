@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Kravy! 🎉 Your Account is Ready</title>
+    <style>
+      
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+      body {
+        width: 100%;
+        background-color: #005ff7;
+        color: #333333;
+        font-family: "Poppins", sans-serif;
+      }
+      .container {
+        max-width: 640px;
+        padding: 32px 24px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        font-family: "Poppins", sans-serif;
+      }
+      header img {
+        height: 56px;
+      }
+      main {
+        margin-top: 32px;
+      }
+      h2 {
+        color: #4a5568;
+      }
+      p {
+        margin-top: 8px;
+        line-height: 1.6;
+        color: #718096;
+      }
+      .verification-code {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        gap: 16px;
+      }
+      .verification-code p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        font-weight: 500;
+        color: #4299e1;
+        text-align: center;
+        border: 1px solid #4299e1;
+        border-radius: 8px;
+        padding-left: auto;
+      }
+      button {
+        padding: 12px 24px;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #3182ce;
+        border: 2px solid #3182ce;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #2b6cb0;
+      }
+      footer {
+        margin-top: 32px;
+        color: #a0aec0;
+      }
+      footer a {
+        color: #4299e1;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .btn {
+        display: flex;
+      }
+      .btn-2 {
+        padding: 12px 24px;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        border: #3182ce 2px solid;
+        color: #3182ce;
+        background-color: #ffffff;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-left: 10px;
+      }
+
+      .btn-2:hover {
+        color: #f8f8ff;
+      }
+
+      .mail {
+        background-color: #f8f8ff;
+        padding: 20px 0px 20px 0px;
+        overflow-y: hidden;
+        border-radius: 20px;
+        width: 100%;
+      }
+
+      .digi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: auto;
+        padding-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mail">
+      <section class="container">
+        <header>
+          <a href="#"
+            ><img
+              src="https://i.ibb.co/JBr8Rp2/kravy-Logo.png"
+              alt="Kravy Logo"
+          /></a>
+        </header>
+
+        <main>
+          <h2>Hi <%= userName %> !,</h2>
+
+          <p>
+            🎉
+            <strong
+              >Congratulations and Welcome to
+              <span style="color: #ff6347">Kravy</span>!</strong
+            >
+            🍽️✨ We’re absolutely
+            <span style="font-weight: bold">thrilled</span> to have you join our
+            flavorful community. Your account has been
+            <span style="color: #28a745; font-weight: bold"
+              >successfully created</span
+            >
+          </p>
+
+          <p>
+            Unlocking a world where
+            <span style="color: #ff8c00">billing meets flavor</span>. Get ready
+            to
+            <span style="font-weight: bold; color: #6366f1"
+              >enjoy the simplicity</span
+            >
+            and discover how easy and delicious Kravy makes everything. 🚀
+          </p>
+
+          <div style="text-align: center">
+            <a
+              href="https://www.youtube.com/watch?v=j8cPFeu8fQQ"
+              target="_blank"
+            >
+              <img
+                src="https://i.ibb.co/brvWbGN/image.png"
+                alt="Watch Video"
+                style="
+                  max-height: 400px;
+                  max-width: 100%;
+                  object-fit: cover;
+                  aspect-ratio: 9 / 15;
+                  border-radius: 8px;
+                  border: 4px solid #6366f1;
+                "
+              />
+            </a>
+          </div>
+
+          <p>
+            Discover how Kravy transforms billing into a flavorful experience!
+            🍴💳 🎥 Watch the video to unlock the full potential of Kravy today!
+            🚀✨
+          </p>
+
+          <div class="btn">
+            <a href="https://kravy.magicscale.in"><button>LOGIN NOW</button></a>
+            <a href="https://kravy.magicscale.in/support"
+              ><button class="btn-2">CONNECT SUPPORT</button></a
+            >
+          </div>
+
+          <p>
+            Thanks, <br />
+            Kravy - where billing meets flavor 🍽️✨ !
+          </p>
+        </main>
+
+        <footer>
+          <p>
+            This email was sent to
+            <a href="#" target="_blank"><%= userEmail %></a>. If you'd rather
+            not receive this kind of email, you can
+            <a href="#">unsubscribe</a> or
+            <a href="#">manage your email preferences</a>.
+          </p>
+
+          <p>© <%= new Date().getFullYear() %> Kravy. All Rights Reserved.</p>
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
